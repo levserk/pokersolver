@@ -475,7 +475,7 @@
       this.resetWildCards();
 
       for (var i=0; i<this.values.length; i++) {
-        if (this.getNumCardsByRank(i) === 5) {
+        if (this.getNumCardsByRank(i) >= 5) {
           this.cards = this.values[i] || [];
           for (var j=0; j<this.wilds.length && this.cards.length<5; j++) {
             var wild = this.wilds[j];

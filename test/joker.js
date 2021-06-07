@@ -115,6 +115,10 @@ describe('A Five of a Kind', function() {
     var hand = new FiveOfAKind(['7h', '7d', 'Or', '7s', '7c'], gameForTest);
     return hand.isPossible.should.equal(true);
   });
+  it('should be detected as possible with two jokers and four of a kind', function() {
+    var hand = new FiveOfAKind(['7h', '7d', 'Or', 'Or', '7s', '7c'], gameForTest);
+    return hand.isPossible.should.equal(true);
+  });
   return it('should be detected as not possible', function() {
     var hand = new FiveOfAKind(['7h', '7d', '3s', '7s', '7c'], gameForTest);
     return hand.isPossible.should.equal(false);
